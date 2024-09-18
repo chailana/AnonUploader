@@ -191,7 +191,7 @@ async def upload(client, message):
         await m.edit("__Pʀᴏᴄᴇss Fᴀɪʟᴇᴅ, Mᴀʏʙᴇ Tɪᴍᴇ Oᴜᴛ Dᴜᴇ Tᴏ Lᴀʀɢᴇ Fɪʟᴇ Sɪᴢᴇ!__")
         return
       
-@bot.on_message(filters.regex(pattern="https://cdn-") & filters.private & ~filters.edited)
+@bot.on_message(filters.regex(pattern="https://cdn-") & filters.private)
 async def url(client, message):
     msg = await message.reply("__Cʜᴇᴄᴋɪɴɢ Uʀʟ...__")
     lenk = message.text
